@@ -41,8 +41,10 @@ class EventAcceptanceTest extends AcceptanceTest {
         String user = "U03MKN0UWQN";
         String timestamp = "1234567890.123456";
         String text = "메시지 전송!";
+        String slackMessageId = "db8a1f84-8acf-46ab-b93d-85177cee3e97";
 
-        Map<String, String> event = Map.of("type", "message", "user", user, "ts", timestamp, "text", text);
+        Map<String, String> event = Map.of("type", "message", "user", user, "ts", timestamp, "text", text,
+                "client_msg_id", slackMessageId);
 
         String type = "event_callback";
         Map<String, Object> request = Map.of("type", type, "event", event);
