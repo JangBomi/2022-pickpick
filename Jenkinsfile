@@ -17,12 +17,12 @@ pipeline
         stage ('Build')
         {
             steps {
-                sh './gradlew bootJar'
+                sh './backend/gradlew bootJar'
             }
         }
         stage('JUnit Test'){
             steps{
-                junit '**/build/test-results/test/*.xml'
+                junit '**/backend/build/test-results/test/*.xml'
             }
         }
     }
