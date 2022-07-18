@@ -9,16 +9,16 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh '''cd backend
-chmod +x ./gradlew
-./gradlew init
-./gradlew build'''
+        sh '''chmod +x ./backend/gradlew
+./backend/gradlew init
+./backend/gradlew build'''
       }
     }
 
     stage('Test') {
       steps {
-        sh '''./gradlew test
+        sh '''chmod backend
+./gradlew test
 '''
       }
     }
