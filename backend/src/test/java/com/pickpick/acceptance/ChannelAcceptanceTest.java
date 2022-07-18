@@ -17,6 +17,6 @@ public class ChannelAcceptanceTest extends AcceptanceTest {
                 .jsonPath()
                 .getList("channels.", ChannelResponse.class);
 
-        assertThat(list.size()).isEqualTo(6);
+        assertThat(list.size()).isEqualTo(0);
     }
 }
