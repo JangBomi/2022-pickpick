@@ -10,6 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         sh '''chmod +x ./backend/gradlew
+./backend/gradlew init
 ./backend/gradlew build'''
       }
     }
