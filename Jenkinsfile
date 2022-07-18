@@ -17,7 +17,7 @@ pipeline
         stage ('Build')
         {
             steps {
-                build './gradlew bootJar'
+                sh './gradlew bootJar'
             }
         }
         stage('JUnit Test'){
