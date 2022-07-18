@@ -15,9 +15,11 @@ pipeline {
       }
     }
 
-    stage('JUnit Test') {
+    stage('Test') {
       steps {
-        junit '**/backend/build/test-results/test/*.xml'
+        sh '''cd backend
+./gradlew test
+'''
       }
     }
 
